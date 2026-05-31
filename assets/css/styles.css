@@ -414,50 +414,20 @@ h3 {
   background: var(--soft);
 }
 
-.article-hero {
-  padding-top: clamp(118px, 14vw, 170px);
+.article-content {
+  padding: clamp(118px, 14vw, 170px) 0 clamp(72px, 10vw, 118px);
   background: linear-gradient(180deg, #f7fbff 0%, #ffffff 320px);
 }
 
-.article-layout {
+.article-stack {
   display: grid;
-  grid-template-columns: minmax(0, 1fr) minmax(320px, 0.92fr);
-  gap: clamp(34px, 7vw, 86px);
-  align-items: start;
+  max-width: 880px;
+  gap: clamp(34px, 5vw, 54px);
 }
 
 .article-header {
-  position: sticky;
-  top: 112px;
-}
-
-.article-layout-with-media .article-header {
   position: static;
-  align-self: center;
   min-width: 0;
-}
-
-.article-layout-with-media .article-body {
-  grid-column: 1 / -1;
-  width: min(100%, 880px);
-  margin: 0 auto;
-}
-
-.article-hero-media {
-  position: relative;
-  min-height: clamp(280px, 35vw, 430px);
-  margin: 0;
-  overflow: hidden;
-  aspect-ratio: 16 / 10;
-  border-radius: var(--radius);
-  box-shadow: var(--shadow);
-}
-
-.article-hero-media img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: 62% center;
 }
 
 .article-header h1 {
@@ -490,6 +460,7 @@ h3 {
 }
 
 .article-body {
+  max-width: 880px;
   padding: clamp(28px, 5vw, 56px);
   border: 1px solid var(--line);
   border-radius: var(--radius);
@@ -766,21 +737,12 @@ h3 {
 
   .intro-grid,
   .split,
-  .profile-panel,
-  .article-layout {
+  .profile-panel {
     grid-template-columns: 1fr;
   }
 
   .article-header {
     position: static;
-  }
-
-  .article-layout-with-media .article-body {
-    width: 100%;
-  }
-
-  .article-hero-media {
-    min-height: 260px;
   }
 
   .service-grid,
@@ -829,14 +791,6 @@ h3 {
 
   .article-body {
     padding: 24px 20px;
-  }
-
-  .article-hero {
-    padding-top: 104px;
-  }
-
-  .article-hero-media {
-    min-height: 210px;
   }
 
   .article-body p,
