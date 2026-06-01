@@ -414,19 +414,19 @@ h3 {
   background: var(--soft);
 }
 
-.article-content {
-  padding: clamp(118px, 14vw, 170px) 0 clamp(72px, 10vw, 118px);
-  background: linear-gradient(180deg, #f7fbff 0%, #ffffff 320px);
+.article-hero {
+  padding: clamp(112px, 14vw, 168px) 0 0;
+  background: linear-gradient(180deg, #f7fbff 0%, #ffffff 100%);
 }
 
-.article-stack {
-  display: grid;
-  max-width: 880px;
-  gap: clamp(34px, 5vw, 54px);
+.article-content {
+  padding: clamp(28px, 5vw, 48px) 0 clamp(72px, 10vw, 118px);
+  background: transparent;
 }
 
 .article-header {
-  position: static;
+  max-width: 880px;
+  margin: 0 auto;
   min-width: 0;
 }
 
@@ -461,6 +461,7 @@ h3 {
 
 .article-body {
   max-width: 880px;
+  margin: 0 auto;
   padding: clamp(28px, 5vw, 56px);
   border: 1px solid var(--line);
   border-radius: var(--radius);
@@ -656,6 +657,18 @@ h3 {
 .reveal.is-visible {
   opacity: 1;
   transform: translateY(0);
+}
+
+/* 記事ページは安定表示を最優先。本文・関連記事・戻るボタンは常に表示する */
+.article-page .reveal,
+.article-page .article-header,
+.article-page .article-body,
+.article-page .article-body section,
+.article-page .article-summary,
+.article-page .article-back {
+  opacity: 1 !important;
+  transform: none !important;
+  transition: none !important;
 }
 
 @media (prefers-reduced-motion: reduce) {

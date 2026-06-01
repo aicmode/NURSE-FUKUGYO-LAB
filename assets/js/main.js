@@ -26,16 +26,23 @@ nav.addEventListener("click", (event) => {
   }
 });
 
-const observer = new IntersectionObserver(
-  (entries) => {
-    entries.forEach((entry) => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add("is-visible");
-        observer.unobserve(entry.target);
-      }
-    });
-  },
-  { threshold: 0.16 }
-);
+// 記事ページでは本文を必ず即表示する（アニメーション遅延・監視で本文が消えないように）
+const isArticlePage = document.body.classList.contains("article-page");
 
-revealItems.forEach((item) => observer.observe(item));
+if (isArticlePage) {
+  revealItems.forEach((item) => item.classList.add("is-visible"));
+} else {
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("is-visible");
+          observer.unobserve(entry.target);
+        }
+      });
+    },
+    { threshold: 0.16 }
+  );
+
+  revealItems.forEach((item) => observer.observe(item));
+}
