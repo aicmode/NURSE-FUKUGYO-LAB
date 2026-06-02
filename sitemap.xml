@@ -6,6 +6,11 @@
     <priority>1.0</priority>
   </url>
   <url>
+    <loc>https://nurse-fukugyoulabo.com/article-continue-or-quit-nurse.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://nurse-fukugyoulabo.com/article-career-change.html</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
