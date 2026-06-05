@@ -536,6 +536,28 @@ h3 {
   margin-top: clamp(34px, 6vw, 54px);
 }
 
+.affiliate-text-link {
+  margin: 24px 0;
+  font-weight: 700;
+}
+
+.affiliate-text-link a {
+  color: #0067d8;
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+
+.affiliate-banner {
+  margin: 40px auto;
+  text-align: center;
+}
+
+.affiliate-banner img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 16px;
+}
+
 .profile {
   padding-top: 70px;
 }
