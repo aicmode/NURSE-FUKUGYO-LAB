@@ -547,6 +547,40 @@ h3 {
   text-underline-offset: 4px;
 }
 
+.rakuten-product-link {
+  margin: 32px 0;
+  padding: 20px;
+  border: 1px solid rgba(15, 23, 42, 0.12);
+  border-radius: 18px;
+  background: var(--white);
+  text-align: center;
+}
+
+.rakuten-product-link a {
+  max-width: 100%;
+  color: #0067d8;
+  font-weight: 800;
+  line-height: 1.7;
+  text-decoration: none;
+  overflow-wrap: anywhere;
+  word-break: break-word;
+}
+
+.rakuten-product-link a:hover {
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+
+.rakuten-product-link img {
+  max-width: 128px;
+  height: auto;
+  margin: 0 auto 12px;
+}
+
+.rakuten-product-link > img[width="1"] {
+  margin: 0;
+}
+
 .affiliate-banner {
   margin: 40px auto;
   text-align: center;
