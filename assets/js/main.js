@@ -32,6 +32,23 @@ const isArticlePage = document.body.classList.contains("article-page");
 if (isArticlePage) {
   revealItems.forEach((item) => item.classList.add("is-visible"));
 } else {
+  const revealHashTarget = () => {
+    if (!window.location.hash) {
+      return;
+    }
+
+    const target = document.getElementById(window.location.hash.slice(1));
+    if (!target) {
+      return;
+    }
+
+    if (target.classList.contains("reveal")) {
+      target.classList.add("is-visible");
+    }
+
+    target.querySelectorAll(".reveal").forEach((item) => item.classList.add("is-visible"));
+  };
+
   const observer = new IntersectionObserver(
     (entries) => {
       entries.forEach((entry) => {
@@ -45,4 +62,6 @@ if (isArticlePage) {
   );
 
   revealItems.forEach((item) => observer.observe(item));
+  revealHashTarget();
+  window.addEventListener("hashchange", revealHashTarget);
 }
