@@ -436,6 +436,12 @@ h3 {
   margin: 0 0 14px;
 }
 
+.medical-work-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: clamp(20px, 3vw, 32px);
+}
+
 .medical-work-card {
   display: grid;
   grid-template-columns: minmax(0, 1.08fr) minmax(300px, 0.72fr);
@@ -447,11 +453,24 @@ h3 {
   box-shadow: 0 24px 70px rgba(27, 84, 70, 0.1);
 }
 
+.medical-work-grid .medical-work-card {
+  grid-template-columns: 1fr;
+  gap: 24px;
+  padding: clamp(24px, 4vw, 38px);
+}
+
 .medical-work-copy {
   display: flex;
   min-width: 0;
   flex-direction: column;
   align-items: flex-start;
+}
+
+.medical-work-number {
+  margin: 0 0 12px;
+  color: #2f7663;
+  font-size: 13px;
+  font-weight: 800;
 }
 
 .medical-work-copy h3 {
@@ -460,10 +479,24 @@ h3 {
   line-height: 1.18;
 }
 
+.medical-work-grid .medical-work-copy h3 {
+  font-size: clamp(26px, 3vw, 34px);
+}
+
 .medical-work-copy p:not(.card-label) {
   margin: 22px 0 26px;
   color: #475569;
   font-size: 17px;
+}
+
+.medical-work-copy p.medical-work-number {
+  margin: 0 0 12px;
+  color: #2f7663;
+  font-size: 13px;
+}
+
+.medical-work-grid .medical-work-copy .button {
+  margin-top: auto;
 }
 
 .medical-work-points {
@@ -552,6 +585,10 @@ h3 {
 
 .medical-page-sample h3 {
   margin-top: 0;
+}
+
+.medical-page-sample-secondary {
+  margin-top: 16px;
 }
 
 .medical-consult-box .button {
@@ -986,7 +1023,8 @@ h3 {
 
   .service-grid,
   .blog-grid,
-  .timeline {
+  .timeline,
+  .medical-work-grid {
     grid-template-columns: 1fr;
   }
 
