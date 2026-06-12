@@ -59,7 +59,8 @@ textarea {
   align-items: center;
   justify-content: space-between;
   width: 100%;
-  padding: 20px clamp(20px, 5vw, 56px);
+  gap: 18px;
+  padding: 20px clamp(18px, 4vw, 48px);
   color: var(--white);
   transition: background 220ms ease, color 220ms ease, border-color 220ms ease;
 }
@@ -74,6 +75,7 @@ textarea {
 }
 
 .brand {
+  flex: 0 0 auto;
   display: inline-flex;
   align-items: center;
   gap: 10px;
@@ -93,11 +95,13 @@ textarea {
 
 .site-nav {
   display: flex;
+  flex: 0 1 auto;
   align-items: center;
-  gap: 26px;
+  gap: clamp(14px, 2vw, 26px);
   font-size: 12px;
   font-weight: 700;
-  letter-spacing: 0.08em;
+  letter-spacing: 0.02em;
+  white-space: nowrap;
 }
 
 .site-nav a {
