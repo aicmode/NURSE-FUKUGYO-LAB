@@ -459,6 +459,12 @@ h3 {
   padding: clamp(24px, 4vw, 38px);
 }
 
+.medical-work-grid > .medical-work-card:nth-child(3):last-child {
+  grid-column: 1 / -1;
+  grid-template-columns: minmax(0, 1.08fr) minmax(280px, 0.72fr);
+  gap: clamp(24px, 4vw, 46px);
+}
+
 .medical-work-copy {
   display: flex;
   min-width: 0;
@@ -1030,7 +1036,8 @@ h3 {
 
   .medical-work-card,
   .medical-cta,
-  .medical-page-sample {
+  .medical-page-sample,
+  .medical-work-grid > .medical-work-card:nth-child(3):last-child {
     grid-template-columns: 1fr;
   }
 
